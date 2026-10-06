@@ -1,18 +1,17 @@
 # SOM Pack Opener
 
-Browser extension that turns existing Somtoday grades visible in the current page into one-time pack reveals.
+SOM Pack Opener integrates directly into Somtoday. It does not create a separate grade dashboard.
+
+The extension detects grade values already rendered in the current Somtoday page and places an ONTHUL button directly over each detected grade. Clicking it runs the pack-opening animation as a full-screen overlay, then shows subject, weight and grade.
+
+Reveal state is stored locally with chrome.storage.local. Grade data is not sent to a server.
 
 ## Install
-1. Download/clone this repository.
-2. Open Chrome or Edge and go to the extensions page.
+1. Clone/download this repository.
+2. Open Chrome or Edge extensions.
 3. Enable Developer mode.
-4. Choose **Load unpacked**.
+4. Select Load unpacked.
 5. Select this repository folder.
-6. Open Somtoday, navigate to your grades, then click the extension.
+6. Open Somtoday and go to Cijfers.
 
-## Important
-- The extension only reads grade information already rendered in the Somtoday page.
-- It does not ask for or store your Somtoday password.
-- Reveal state is stored locally in the browser.
-- This is a fan-made extension and is not affiliated with Somtoday.
-- The pack animation is an original football-pack-inspired animation, not a copy of EA/FC assets.
+The detector uses generic DOM patterns because Somtoday can change its internal HTML/classes.
