@@ -1,0 +1,1 @@
+document.getElementById("open").onclick=async()=>{const tabs=await chrome.tabs.query({active:true,currentWindow:true});if(tabs[0]?.id)chrome.tabs.sendMessage(tabs[0].id,{type:"open"});window.close();};
