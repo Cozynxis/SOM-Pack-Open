@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "SOM Pack Opener",
+  "version": "1.0.0",
+  "description": "Reveal your existing Somtoday grades as one-time pack openings.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://*.somtoday.nl/*"],
+  "content_scripts": [{
+    "matches": ["https://*.somtoday.nl/*"],
+    "js": ["content.js"],
+    "css": ["styles.css"],
+    "run_at": "document_idle"
+  }],
+  "action": {
+    "default_title": "SOM Pack Opener",
+    "default_popup": "popup.html"
+  }
+}
